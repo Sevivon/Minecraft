@@ -47,7 +47,7 @@ class Damier
 		echiquier.genererFonction("fonctions/echiquier.mcfunction");
 
 		Damier damier = new Damier(10,10,"concrete","white","black");
-		damier.genererFonction("fonctions/plateauDames.mcfunction");
+		damier.genererFonction("fonctions/plateau_dames.mcfunction");
 
 		Damier damier50 = new Damier(50,50,"wool","lime","red");
 		damier50.genererFonction("fonctions/damier50.mcfunction");
