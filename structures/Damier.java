@@ -31,7 +31,7 @@ class Damier
 
 			for ( int dx = 0 ; dx < this.largeur ; dx++ )
 				for ( int dz = 0 ; dz < this.hauteur ; dz++ )
-					pw.println(String.format("setblock ~%d ~ ~%d %s color=%s",dx,dz,this.bloc,(dx+dz)%2==0?this.couleur1:this.couleur2));
+					pw.printf("setblock ~%d ~ ~%d %s color=%s\n",dx,dz,this.bloc,(dx+dz)%2==0?this.couleur1:this.couleur2);
 
 			pw.close();
 		}
