@@ -38,9 +38,9 @@ class Trace
 			for ( x = 0 ; x <= echelleX*(xMax-xMin) ; x++ )
 			{
 				y = (int)Math.round(echelleY*fonction.apply(xMin+(double)x/echelleX));
-				pw.printf("setblock ~%d ~ ~%d %s color=%s\n",x,y,BLOC_TRACE,COULEUR_TRACE);
+				pw.printf("setblock ~-%d ~ ~%d %s color=%s\n",x,y,BLOC_TRACE,COULEUR_TRACE);
 			}
-			
+
 			pw.close();
 		}
 		catch ( FileNotFoundException e )
@@ -52,6 +52,6 @@ class Trace
 	public static void main ( String... argv )
 	{
 		Trace traceCarre = new Trace(x->x*x,0,10,10,10);
-		traceCarre.genererFonction("fonctions/traceCarre.mcfunction");
+		traceCarre.genererFonction("fonctions/trace_carre.mcfunction");
 	}
 }
