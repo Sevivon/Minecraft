@@ -2,6 +2,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
 /**
+ * Génération d'un damier
  * @author Sevivon
  */
 class Damier
@@ -29,9 +30,11 @@ class Damier
 		{
 			PrintWriter pw = new PrintWriter(fichier);
 
-			for ( int dx = 0 ; dx < this.largeur ; dx++ )
-				for ( int dz = 0 ; dz < this.hauteur ; dz++ )
-					pw.printf("setblock ~%d ~ ~%d %s color=%s\n",dx,dz,this.bloc,(dx+dz)%2==0?this.couleur1:this.couleur2);
+			pw.printf("fill ~ ~ ~ ~%d ~ ~%d %s color=%s\n",largeur-1,hauteur-1,bloc,couleur2);
+
+			for ( int dx = 0 ; dx < largeur ; dx++ )
+				for ( int dz = dx%2 ; dz < hauteur ; dz+=2 )
+					pw.printf("setblock ~%d ~ ~%d %s color=%s\n",dx,dz,bloc,couleur1);
 
 			pw.close();
 		}
