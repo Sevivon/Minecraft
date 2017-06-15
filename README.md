@@ -4,8 +4,8 @@
 
 ### Damiers
 
-[Trois damiers générés](/images/damiers.png)
+![Trois damiers générés](/images/damiers.png)
 
 ### Tracé de fonctions mathématiques
 
-[Tracé de la fonction carré](/images/traceCarre.png)
+![Tracé de la fonction carré](/images/traceCarre.png)
